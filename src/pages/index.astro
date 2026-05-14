@@ -1,17 +1,12 @@
 ---
 import BaseLayout from "$layouts/BaseLayout.astro";
 import About from "$components/About/About.astro";
-import Learning from "$components/Learning/Learning.svelte";
 import Contact from "$components/Contact/Contact.astro";
 import Projects from "$components/Projects/Projects.astro";
 import Hero from "$components/Hero/Hero.svelte";
 import PlanetScene from "$components/Hero/3D/PlanetScene.svelte";
-import { getFeaturedProjects } from "src/utils";
 import Footer from "$components/Footer.astro";
 import Navbar from "$components/Navigation/Navbar.svelte";
-import BlogLatest from "$components/Blog/BlogLatest.astro";
-
-const projects = await getFeaturedProjects();
 ---
 
 <BaseLayout>
@@ -23,11 +18,28 @@ const projects = await getFeaturedProjects();
 
   <About />
 
-  <Projects projects={projects} />
+  <Projects />
 
   <!-- <BlogLatest /> -->
 
-  <Learning client:visible />
+  <section class="py-16 md:py-32 section bg-background relative isolate overflow-hidden">
+    <div class="mx-auto max-w-5xl px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-base-800 dark:text-base-100 sm:text-4xl">
+        Want to play a game?
+      </h2>
+      <p class="mt-4 text-base text-base-600 dark:text-base-400">
+        I've built some fun little experiments and games. Check them out!
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a
+          href="/games"
+          class="rounded-full bg-accent-500 px-8 py-3 text-sm font-semibold text-white shadow-sm hover:bg-accent-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500 transition-all duration-200"
+        >
+          Go to Games
+        </a>
+      </div>
+    </div>
+  </section>
 
   <Contact />
 

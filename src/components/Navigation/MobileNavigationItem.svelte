@@ -10,7 +10,7 @@
 
 <li>
   <a
-    href="/#{current}"
+    href={current === 'games' ? '/games' : `/#${current}`}
     class="block py-2 {active == current ? 'dark:text-accent-400' : ''}"
     on:click={hide}
   >

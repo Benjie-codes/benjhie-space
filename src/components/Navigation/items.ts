@@ -1,4 +1,4 @@
 
-export const items = ['home', 'about', 'projects', 'learning', 'contact'];
+export const items = ['home', 'about', 'projects', 'games', 'contact'];
 
 export type Item = (typeof items)[number];
