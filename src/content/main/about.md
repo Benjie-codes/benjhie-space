@@ -1,20 +1,9 @@
-#I Build for the Web. I Teach the Next Generation to Do the Same..
+# I'm Benjhie, I build for the Web and design brand identities.
 
-i was one of the only kids in my class without a game console, but
-we did have a computer. when i was 12, I got a coding book for
-christmas and tried making my own games in C and opengl. though
-i never finished any of those early projects, i got hooked on
-programming.
+Front-End Developer · Brand Designer · Tech Educator
 
-after school, I started studying computer science and started
-working as a software developer. i really love the web because
-it's so accessible — anyone with a device and internet can access
-your work instantly. publishing and sharing your work is also
-pretty simple, whether as a website, a pwa, or a serverless
-function/api.
+I didn't start with a grand plan. I started with a classroom full of children who wanted to be something extraordinary in life (An Astronaut). It felt like a big dream back then, so i decided to be a computer scientist to fast track the dream. Instead, I fell in love with the process of creating and solving problems. 
 
-in my free time, i build lots of web-based projects. i really like
-the intersection of design and development. I love learning new
-things and am always looking for new cool projects. If you want to
-build something together or just want to connect, feel free to 
-[reach out](#contact).
+I started studying computer science amidst learning graphic design, working as a software developer and brand designer for a couple of years now. During this time, I've worked on various web-based projects whether as a website or a pwa, brand identities for a couple of businesses and taught a number of children how to code.
+
+in my free time, i still build lots of web-based projects and brand identities. i really like the intersection of design and development. I love learning new things and am always looking for new cool projects. If you want to build something together or just want to connect, feel free to check out <a href="/assets/resume.pdf" target="_blank">my resume</a> or [reach out](#contact).

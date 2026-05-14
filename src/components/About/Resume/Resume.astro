@@ -1,55 +1,35 @@
 ---
-import enna from "$assets/about/logos/enna.png";
-import puppet from "$assets/about/logos/puppet.png";
-import tub from "$assets/about/logos/tub.png";
-import hyperlumen from "$assets/about/logos/hyperlumen.png";
-
 import Role from "./Role.astro";
-import type { ImageMetadata } from "astro";
 
 let resume: Array<{
   company: string;
   title: string;
-  logo: ImageMetadata;
   start: string | { label: string; dateTime: string };
   end: string | { label: string; dateTime: string };
 }> = [
-  // {
-  //   company: "hyperlumen",
-  //   title: "co-founder",
-  //   logo: hyperlumen,
-  //   start: "2023",
-  //   end: "2024",
-  // },
   {
-    company: "enna",
-    title: "student software engineer",
-    logo: enna,
-    start: "2022",
-    end: {
-      label: "present",
-      dateTime: new Date().getFullYear().toString(),
-    },
+    company: "River State University, Comp. Sci. Dept.",
+    title: "ICT Director",
+    start: "2021",
+    end: "2022",
   },
   {
-    company: "puppet",
-    title: "co-founder",
-    logo: puppet,
-    start: "2022",
-    end: {
-      label: "present",
-      dateTime: new Date().getFullYear().toString(),
-    },
+    company: "Whitehat Academy",
+    title: "Intern",
+    start: "2021",
+    end: "2022",
   },
   {
-    company: "tu berlin",
-    title: "studying computer science",
-    logo: tub,
-    start: "2018",
-    end: {
-      label: "present",
-      dateTime: new Date().getFullYear().toString(),
-    },
+    company: "Bel Institue of Learning",
+    title: "Lead Instructor",
+    start: "2023",
+    end: "2025",
+  },
+  {
+    company: "GRYD",
+    title: "Lead Designer",
+    start: "2025",
+    end: "2026",
   },
 ];
 ---

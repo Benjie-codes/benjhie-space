@@ -1,5 +1,5 @@
 export const BASE = '';
-export const SITE = '';
+export const SITE = 'https://Benjie-codes.github.io/benjhie-space';
 export const SITE_FAVICON = '🌎';
 
 export const BASE_COLOR = 'zinc';
