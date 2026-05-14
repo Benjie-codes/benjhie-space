@@ -1,0 +1,61 @@
+---
+import { BASE, SITE_FAVICON } from "../config";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, description, image = "og.jpg" } = Astro.props;
+
+const defaultTitle = "hi, i'm florian";
+const defaultDescription =
+  "hello world! this is my personal website. i'm florian, a full-stack software engineer based in berlin.";
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link
+  rel="icon"
+  href=`data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>${SITE_FAVICON}</text></svg>`
+/>
+
+<meta name="generator" content={Astro.generator} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title || defaultTitle}</title>
+<meta name="title" content={title || defaultTitle} />
+<meta name="description" content={description || defaultDescription} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title || defaultTitle} />
+<meta property="og:description" content={description || defaultDescription} />
+<meta property="og:image" content={new URL(BASE + image, Astro.url)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title || defaultTitle} />
+<meta
+  property="twitter:description"
+  content={description || defaultDescription}
+/>
+<meta property="twitter:image" content={new URL(BASE + image, Astro.url)} />
+
+<!-- Umami Analytics -->
+<script
+  is:inline
+  defer
+  src="https://umami-wispy-dream-8048.fly.dev/script.js"
+  data-website-id="0bb6f5a5-4c09-49ad-b831-22ed25a208c9"
+  data-domains="flo-bit.dev"></script>
