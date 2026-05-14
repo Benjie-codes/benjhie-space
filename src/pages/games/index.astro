@@ -2,28 +2,31 @@
 import BaseLayout from "$layouts/BaseLayout.astro";
 import Navbar from "$components/Navigation/Navbar.svelte";
 import Footer from "$components/Footer.astro";
+import SnakeGame from "$components/Games/SnakeGame.svelte";
 ---
 
 <BaseLayout title="Games">
   <Navbar client:load />
   
   <main class="mx-auto max-w-5xl px-6 lg:px-8 py-32">
-    <div class="max-w-2xl">
-      <h1 class="text-4xl font-bold tracking-tight text-base-800 dark:text-base-100 sm:text-5xl">
-        Games
-      </h1>
-      <p class="mt-6 text-base text-base-600 dark:text-base-400">
-        Welcome to the games section! I'll be implementing a simple snake game here soon. Stay tuned!
-      </p>
-      
-      <div class="mt-12 p-12 border-2 border-dashed border-base-300 dark:border-base-800 rounded-3xl flex items-center justify-center text-base-400 italic">
-        Snake game coming soon...
+    <div class="flex flex-col lg:flex-row gap-16 items-start">
+      <div class="max-w-xl">
+        <h1 class="text-4xl font-bold tracking-tight text-base-800 dark:text-base-100 sm:text-5xl">
+          Snake Game
+        </h1>
+        <p class="mt-6 text-base text-base-600 dark:text-base-400">
+          A simple, nostalgic snake game built with Svelte. Use your arrow keys or WASD to navigate and collect the red orbs. Each orb increases your score and speed!
+        </p>
+        
+        <div class="mt-8">
+          <a href="/" class="text-accent-500 font-semibold hover:text-accent-400 transition-colors flex items-center gap-2">
+            <span>&larr;</span> Back to Home
+          </a>
+        </div>
       </div>
-      
-      <div class="mt-8">
-        <a href="/" class="text-accent-500 font-semibold hover:text-accent-400 transition-colors">
-          &larr; Back to Home
-        </a>
+
+      <div class="w-full flex justify-center">
+        <SnakeGame client:load />
       </div>
     </div>
   </main>

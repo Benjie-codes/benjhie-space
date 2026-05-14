@@ -8,7 +8,5 @@ export const ACCENT_COLOR = 'cyan';
 export const SOCIALS = {
 	GITHUB: 'https://github.com/Benjhie-codes',
 	MAIL: 'mailto:me.benjhamine@gmail.com',
-	// SUBSTACK: ''
-	// BLUESKY: '',
-	// LINKEDIN: '',
+	INSTAGRAM: 'https://www.instagram.com/upsln',
 };
