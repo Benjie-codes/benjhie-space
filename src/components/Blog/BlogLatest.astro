@@ -1,13 +1,6 @@
 ---
 import { getBlogPosts } from "src/utils";
 
-interface Article {
-  title: string;
-  description: string;
-  date: string;
-  href: string;
-}
-
 const posts = (await getBlogPosts()).splice(0, 4);
 
 function formatDate(date: Date) {

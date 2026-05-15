@@ -145,8 +145,6 @@ export class Biome {
   addVegetation(
     item: VegetationItem,
     position: Vector3,
-    normalizedHeight: number,
-    steepness: number,
   ) {
     this.vegetationPositions.insert(position, item);
   }

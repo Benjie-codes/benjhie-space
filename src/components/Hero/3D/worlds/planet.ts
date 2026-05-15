@@ -1,5 +1,4 @@
 import {
-  BufferGeometry,
   Float32BufferAttribute,
   Mesh,
   MeshStandardMaterial,
@@ -129,13 +128,7 @@ export class Planet {
     planetMesh.castShadow = true;
 
     if (this.options.material === "caustics") {
-      planetMesh.onBeforeRender = (
-        renderer,
-        scene,
-        camera,
-        geometry,
-        material,
-      ) => {
+      planetMesh.onBeforeRender = (material) => {
         if (material instanceof PlanetMaterialWithCaustics) {
           material.update();
         }
@@ -154,13 +147,7 @@ export class Planet {
     );
 
     planetMesh.add(oceanMesh);
-    oceanMesh.onBeforeRender = (
-      renderer,
-      scene,
-      camera,
-      geometry,
-      material,
-    ) => {
+    oceanMesh.onBeforeRender = () => {
       // update morph targets
       if (oceanMesh.morphTargetInfluences)
         oceanMesh.morphTargetInfluences[0] =

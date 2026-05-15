@@ -76,7 +76,7 @@ export const spring = <T extends Record<string, number> | number>(
 	const set = (value: T) => {
 		endValue = value;
 		settled = false;
-		settledArray.forEach(function (part, index, theArray) {
+		settledArray.forEach(function (settledValue, index, theArray) {
 			theArray[index] = false;
 		});
 	};

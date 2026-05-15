@@ -408,7 +408,7 @@ function createGeometry(
           a.normalize();
         }
 
-        biome.addVegetation(vegetation, a, normalizedHeight, steepness);
+        biome.addVegetation(vegetation, a);
         break;
       }
     }
